@@ -12,6 +12,7 @@ target 'TodoApp' do
     pod 'RxDataSources'
     pod 'Moya'
     pod 'NVActivityIndicatorView'
+    pod 'SVProgressHUD'
     pod 'SnapKit'
 
   target 'TodoAppTests' do

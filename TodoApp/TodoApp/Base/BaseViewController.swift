@@ -8,6 +8,7 @@
 import UIKit
 import NVActivityIndicatorView
 import SnapKit
+import SVProgressHUD
 
 protocol DecorationChangable: AnyObject {
     func setupColors()
@@ -19,7 +20,7 @@ public enum LeftBarItem {
 }
 
 open class BaseViewController: UIViewController, DecorationChangable, UIGestureRecognizerDelegate {
-
+    
     private lazy var activityIndicator : UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
         indicator.backgroundColor = .gray
@@ -52,10 +53,11 @@ open class BaseViewController: UIViewController, DecorationChangable, UIGestureR
         let btn = UIButton()
         btn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         btn.contentHorizontalAlignment = .left
+        btn.tintColor = .black
         
         switch leftBarItemOption {
         case .back:
-            btn.setImage(UIImage(named: "ic_back"), for: .normal)
+            btn.setImage(UIImage(systemName: "arrowshape.turn.up.left.fill"), for: .normal)
         case .close:
             break
         case .none:
@@ -162,7 +164,7 @@ open class BaseViewController: UIViewController, DecorationChangable, UIGestureR
     
     private func setupNavigationBar() {
         guard let navigationBar = navigationController?.navigationBar else { return }
-
+        
         if #available(iOS 15.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
@@ -240,12 +242,12 @@ open class BaseViewController: UIViewController, DecorationChangable, UIGestureR
         btnRight.setTitle(buttonTitle, for: .normal)
         btnRight.setTitleColor(textColor, for: .normal)
         btnRight.titleLabel?.font = titleFont
-
+        
         btnRight.titleEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
         btnRight.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         customView.addSubview(btnRight)
-
+        
         btnRight.frame = CGRect(x:0,
                                 y: (wrapperHeight - btnHeight)/2.0,
                                 width: wrapperWidth,
@@ -279,17 +281,10 @@ open class BaseViewController: UIViewController, DecorationChangable, UIGestureR
 // MARK: Loading indicator
 public extension BaseViewController {
     func dismissLoadingIndicator() {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.removeFromSuperview()
-        }
-        
+        SVProgressHUD.dismiss()
     }
     
     func showLoadingIndicator() {
-        DispatchQueue.main.async {
-            self.view.addSubview(self.activityIndicator)
-            self.activityIndicator.startAnimating()
-        }
+        SVProgressHUD.show()
     }
 }

@@ -8,10 +8,10 @@
 import UIKit
 import RxSwift
 
-final class HomeViewController: BaseViewController {
+final class HomeViewController: RxBaseViewController<HomeViewModel> {
     private let goToContactList = PublishSubject<Void>()
     private let goToBuyList = PublishSubject<Void>()
-    private let disposeBag = DisposeBag()
+    private let goToSellList = PublishSubject<Void>()
     
     @IBAction func handleCallListAction(_ sender: Any) {
         goToContactList.onNext(())
@@ -27,11 +27,24 @@ final class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
         bindingData()
     }
-
+    
     private func bindingData() {
+        let input = Input(goToCallListTrigger: goToContactList.asObservable(),
+                          goToBuyListTrigger: goToBuyList.asObservable(),
+                          goToSellListTrigger: goToSellList.asObservable())
         
+        let output = viewModel.transform(input: input)
+        
+        output.goToCallListOutput.drive(onNext: { data in
+            ScreenCoordinator.goToListContact(contacts: data)
+        }).disposed(by: disposeBag)
+        
+        output.goToBuyListOutput.drive(onNext: { data in
+            ScreenCoordinator.goToListDevice(devices: data)
+        }).disposed(by: disposeBag)
+        
+        output.loadingIndicator.drive(rx.isLoading).disposed(by: disposeBag)
     }
 }

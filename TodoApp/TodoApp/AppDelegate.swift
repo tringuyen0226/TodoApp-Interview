@@ -16,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupNetworking()
-        
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = HomeViewController()
-        window.makeKeyAndVisible()
-        self.window = window
+        initRootViewController()
         return true
     }
     
@@ -30,6 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                   platform: nil,
                                   domain: "my-json-server.typicode.com",
                                   language: nil)
+    }
+    
+    private func initRootViewController() {
+        let vc = HomeViewController(viewModel: HomeViewModel())
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
+        if let window = window {
+            let navigationController = UINavigationController(rootViewController: vc)
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+        }
     }
 
     // MARK: - Core Data stack

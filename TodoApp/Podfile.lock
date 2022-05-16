@@ -29,6 +29,7 @@ PODS:
   - RxTest (6.5.0):
     - RxSwift (= 6.5.0)
   - SnapKit (5.6.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Moya
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - RxSwiftExt
   - RxTest
   - SnapKit
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -53,6 +55,7 @@ SPEC REPOS:
     - RxSwiftExt
     - RxTest
     - SnapKit
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -66,7 +69,8 @@ SPEC CHECKSUMS:
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 94188be92e4f71f19e15e60c2392749aa0d766d1
+PODFILE CHECKSUM: bd72aafa87da50e687de47def3e1f4dcaa074db2
 
 COCOAPODS: 1.11.3
