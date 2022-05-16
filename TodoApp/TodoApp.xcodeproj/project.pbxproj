@@ -19,6 +19,20 @@
 		C470191428315FA100F6D6D6 /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470191328315FA100F6D6D6 /* TodoAppTests.swift */; };
 		C470191E28315FA100F6D6D6 /* TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470191D28315FA100F6D6D6 /* TodoAppUITests.swift */; };
 		C470192028315FA100F6D6D6 /* TodoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470191F28315FA100F6D6D6 /* TodoAppUITestsLaunchTests.swift */; };
+		C4B43AC828327B5500127B6F /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AC728327B5500127B6F /* NetworkConfig.swift */; };
+		C4B43ACB28327DAD00127B6F /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43ACA28327DAD00127B6F /* ContactModel.swift */; };
+		C4B43ACE28327E5E00127B6F /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43ACD28327E5E00127B6F /* DeviceModel.swift */; };
+		C4B43AD128327F8100127B6F /* BaseAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AD028327F8100127B6F /* BaseAPIs.swift */; };
+		C4B43AD328327FFB00127B6F /* KzError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AD228327FFB00127B6F /* KzError.swift */; };
+		C4B43AD52832801E00127B6F /* KzNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AD42832801E00127B6F /* KzNetwork.swift */; };
+		C4B43AD7283280BF00127B6F /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AD6283280BF00127B6F /* BaseResult.swift */; };
+		C4B43AD9283280E900127B6F /* KzAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AD8283280E900127B6F /* KzAPIClient.swift */; };
+		C4B43ADB2832813600127B6F /* KzNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43ADA2832813600127B6F /* KzNetworkServices.swift */; };
+		C4B43ADD2832854900127B6F /* ContactAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43ADC2832854900127B6F /* ContactAPIs.swift */; };
+		C4B43ADF283285B600127B6F /* DeviceAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43ADE283285B600127B6F /* DeviceAPIs.swift */; };
+		C4B43AE128329E6500127B6F /* RxNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AE028329E6500127B6F /* RxNetworking.swift */; };
+		C4B43AE42832A3D900127B6F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AE32832A3D900127B6F /* UIView+Extensions.swift */; };
+		C4B43AE62832A3F800127B6F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B43AE52832A3F800127B6F /* UIImage+Extensions.swift */; };
 		E5CD420690BBF8B5873743A1 /* Pods_TodoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A328E26D9B202D8377E78F7 /* Pods_TodoAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +74,20 @@
 		C470191928315FA100F6D6D6 /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C470191D28315FA100F6D6D6 /* TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITests.swift; sourceTree = "<group>"; };
 		C470191F28315FA100F6D6D6 /* TodoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C4B43AC728327B5500127B6F /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		C4B43ACA28327DAD00127B6F /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		C4B43ACD28327E5E00127B6F /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		C4B43AD028327F8100127B6F /* BaseAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIs.swift; sourceTree = "<group>"; };
+		C4B43AD228327FFB00127B6F /* KzError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KzError.swift; sourceTree = "<group>"; };
+		C4B43AD42832801E00127B6F /* KzNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KzNetwork.swift; sourceTree = "<group>"; };
+		C4B43AD6283280BF00127B6F /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		C4B43AD8283280E900127B6F /* KzAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KzAPIClient.swift; sourceTree = "<group>"; };
+		C4B43ADA2832813600127B6F /* KzNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KzNetworkServices.swift; sourceTree = "<group>"; };
+		C4B43ADC2832854900127B6F /* ContactAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPIs.swift; sourceTree = "<group>"; };
+		C4B43ADE283285B600127B6F /* DeviceAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAPIs.swift; sourceTree = "<group>"; };
+		C4B43AE028329E6500127B6F /* RxNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNetworking.swift; sourceTree = "<group>"; };
+		C4B43AE32832A3D900127B6F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C4B43AE52832A3F800127B6F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		E6732D629F76ED951E92CCBA /* Pods_TodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A06357E27E8C50FB571D60 /* Pods_TodoApp_TodoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApp_TodoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE156A94BF61AF234835EA7 /* Pods-TodoApp-TodoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp-TodoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TodoApp-TodoAppUITests/Pods-TodoApp-TodoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +241,8 @@
 		C47018F828315F9F00F6D6D6 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				C4B43AE22832A3C400127B6F /* Extension */,
+				C4B43AC328327B0600127B6F /* Networking */,
 				C46C2943283161840090B749 /* Base */,
 				C46C29422831617B0090B749 /* Utils */,
 				C46C293D283160C60090B749 /* Scences */,
@@ -240,6 +270,82 @@
 				C470191F28315FA100F6D6D6 /* TodoAppUITestsLaunchTests.swift */,
 			);
 			path = TodoAppUITests;
+			sourceTree = "<group>";
+		};
+		C4B43AC328327B0600127B6F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43ACF28327F7200127B6F /* Base */,
+				C4B43AC628327B4600127B6F /* Configs */,
+				C4B43AC528327B2200127B6F /* Models */,
+				C4B43AC428327B0E00127B6F /* APIs */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C4B43AC428327B0E00127B6F /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43ADC2832854900127B6F /* ContactAPIs.swift */,
+				C4B43ADE283285B600127B6F /* DeviceAPIs.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		C4B43AC528327B2200127B6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43ACC28327E5100127B6F /* Device */,
+				C4B43AC928327D4000127B6F /* Contact */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4B43AC628327B4600127B6F /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43AC728327B5500127B6F /* NetworkConfig.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		C4B43AC928327D4000127B6F /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43ACA28327DAD00127B6F /* ContactModel.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		C4B43ACC28327E5100127B6F /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43ACD28327E5E00127B6F /* DeviceModel.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		C4B43ACF28327F7200127B6F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43AD028327F8100127B6F /* BaseAPIs.swift */,
+				C4B43AD228327FFB00127B6F /* KzError.swift */,
+				C4B43AD42832801E00127B6F /* KzNetwork.swift */,
+				C4B43AD6283280BF00127B6F /* BaseResult.swift */,
+				C4B43AD8283280E900127B6F /* KzAPIClient.swift */,
+				C4B43ADA2832813600127B6F /* KzNetworkServices.swift */,
+				C4B43AE028329E6500127B6F /* RxNetworking.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C4B43AE22832A3C400127B6F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C4B43AE32832A3D900127B6F /* UIView+Extensions.swift */,
+				C4B43AE52832A3F800127B6F /* UIImage+Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,10 +605,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B43ADB2832813600127B6F /* KzNetworkServices.swift in Sources */,
+				C4B43AD7283280BF00127B6F /* BaseResult.swift in Sources */,
 				C47018FA28315F9F00F6D6D6 /* AppDelegate.swift in Sources */,
+				C4B43AD128327F8100127B6F /* BaseAPIs.swift in Sources */,
+				C4B43AD328327FFB00127B6F /* KzError.swift in Sources */,
+				C4B43AC828327B5500127B6F /* NetworkConfig.swift in Sources */,
+				C4B43AE42832A3D900127B6F /* UIView+Extensions.swift in Sources */,
+				C4B43ACE28327E5E00127B6F /* DeviceModel.swift in Sources */,
+				C4B43ADF283285B600127B6F /* DeviceAPIs.swift in Sources */,
+				C4B43ADD2832854900127B6F /* ContactAPIs.swift in Sources */,
+				C4B43AD9283280E900127B6F /* KzAPIClient.swift in Sources */,
+				C4B43ACB28327DAD00127B6F /* ContactModel.swift in Sources */,
 				C46C2945283161A50090B749 /* BaseViewController.swift in Sources */,
 				C470190428315F9F00F6D6D6 /* TodoApp.xcdatamodeld in Sources */,
 				C46C2940283160D90090B749 /* HomeViewController.swift in Sources */,
+				C4B43AE62832A3F800127B6F /* UIImage+Extensions.swift in Sources */,
+				C4B43AD52832801E00127B6F /* KzNetwork.swift in Sources */,
+				C4B43AE128329E6500127B6F /* RxNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +799,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +828,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

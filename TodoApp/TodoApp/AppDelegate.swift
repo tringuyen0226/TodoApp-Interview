@@ -15,11 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupNetworking()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = HomeViewController()
         window.makeKeyAndVisible()
         self.window = window
         return true
+    }
+    
+    private func setupNetworking() {
+        KzAPIClient.shared.config(with: URL(string: "https://my-json-server.typicode.com")!,
+                                  token: nil,
+                                  platform: nil,
+                                  domain: "my-json-server.typicode.com",
+                                  language: nil)
     }
 
     // MARK: - Core Data stack

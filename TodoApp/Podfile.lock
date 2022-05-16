@@ -1,5 +1,13 @@
 PODS:
+  - Alamofire (5.6.1)
   - Differentiator (5.0.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -20,33 +28,45 @@ PODS:
     - RxSwiftExt/Core
   - RxTest (6.5.0):
     - RxSwift (= 6.5.0)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - Moya
+  - NVActivityIndicatorView
   - RxCocoa
   - RxDataSources
   - RxSwift
   - RxSwiftExt
   - RxTest
+  - SnapKit
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Differentiator
+    - Moya
+    - NVActivityIndicatorView
     - RxCocoa
     - RxDataSources
     - RxRelay
     - RxSwift
     - RxSwiftExt
     - RxTest
+    - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 0ecdb7d9294507e69cbf6ec961d6976fe9b9d9d8
+PODFILE CHECKSUM: 94188be92e4f71f19e15e60c2392749aa0d766d1
 
 COCOAPODS: 1.11.3
