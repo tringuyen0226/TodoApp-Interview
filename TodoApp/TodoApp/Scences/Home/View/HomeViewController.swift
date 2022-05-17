@@ -22,7 +22,7 @@ final class HomeViewController: RxBaseViewController<HomeViewModel> {
     }
     
     @IBAction func handleSellListAction(_ sender: Any) {
-        
+        goToSellList.onNext(())
     }
     
     override func viewDidLoad() {
@@ -43,6 +43,10 @@ final class HomeViewController: RxBaseViewController<HomeViewModel> {
         
         output.goToBuyListOutput.drive(onNext: { data in
             ScreenCoordinator.goToListDevice(devices: data)
+        }).disposed(by: disposeBag)
+        
+        output.goToSellListOutput.drive(onNext: { data in
+            ScreenCoordinator.goToSellList(devices: data)
         }).disposed(by: disposeBag)
         
         output.loadingIndicator.drive(rx.isLoading).disposed(by: disposeBag)

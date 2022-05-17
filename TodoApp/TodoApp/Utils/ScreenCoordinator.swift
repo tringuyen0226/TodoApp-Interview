@@ -57,4 +57,8 @@ enum ScreenCoordinator {
         rootNavigation.pushViewController(vc, animated: true)
     }
     
+    static func goToSellList(devices: [DeviceModel]) {
+        let vc = ListSellViewController(viewModel: ListSellViewModel(devices: devices))
+        rootNavigation.pushViewController(vc, animated: true)
+    }
 }

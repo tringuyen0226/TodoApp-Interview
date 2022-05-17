@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TodoApp/CoreData/Models/ItemToSell+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:TodoApp/CoreData/Models/ItemToSell+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:TodoApp.xcodeproj">
    </FileRef>
    <FileRef

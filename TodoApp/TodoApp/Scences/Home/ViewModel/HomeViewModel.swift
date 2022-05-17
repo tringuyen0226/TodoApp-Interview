@@ -8,10 +8,12 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CoreData
 
-class HomeViewModel: ViewModelTrackable, ViewModelTransformable {
+class HomeViewModel: NSObject, ViewModelTrackable, ViewModelTransformable {
     var loadingIndicator = ActivityIndicator()
     var errorTracker = ErrorTracker()
+    private let disposeBag = DisposeBag()
     
     struct Input {
         let goToCallListTrigger: Observable<Void>
@@ -22,7 +24,7 @@ class HomeViewModel: ViewModelTrackable, ViewModelTransformable {
     struct Output {
         let goToCallListOutput: Driver<[ContactModel]>
         let goToBuyListOutput: Driver<[DeviceModel]>
-        let goToSellListOutput: Observable<Void>
+        let goToSellListOutput: Driver<[DeviceModel]>
         let loadingIndicator: ActivityIndicator
         let errorTracker: ErrorTracker
     }
@@ -41,10 +43,22 @@ class HomeViewModel: ViewModelTrackable, ViewModelTransformable {
                     .track(vm)
             }.asDriverOnErrorJustComplete()
         
+        let goToSellListOutput = input.goToSellListTrigger.withUnretained(self)
+            .map { $0.0.getLocalDevice() }
+            .asDriverOnErrorJustComplete()
+        
         return Output(goToCallListOutput: goToCallListOutput,
                       goToBuyListOutput: goToBuyListOutput,
-                      goToSellListOutput: Observable.just(()),
+                      goToSellListOutput: goToSellListOutput,
                       loadingIndicator: loadingIndicator,
                       errorTracker: errorTracker)
+    }
+    
+    private func getLocalDevice() -> [DeviceModel] {
+        return ItemToSellModel.shared.getAll().map { DeviceModel(id: Int($0.id),
+                                                                 name: $0.name.orEmpty,
+                                                                 price: Int($0.price),
+                                                                 quantity: Int($0.quantity),
+                                                                 type: Int($0.type)) }
     }
 }

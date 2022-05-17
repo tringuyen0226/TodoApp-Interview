@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F4148BE9030F448512D5259 /* Pods_TodoApp_TodoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A06357E27E8C50FB571D60 /* Pods_TodoApp_TodoAppUITests.framework */; };
 		6E4C343C2BA815B3FD855074 /* Pods_TodoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6732D629F76ED951E92CCBA /* Pods_TodoApp.framework */; };
+		C446A7972833920400D76A6C /* ListSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446A7952833920400D76A6C /* ListSellViewController.swift */; };
+		C446A7982833920400D76A6C /* ListSellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C446A7962833920400D76A6C /* ListSellViewController.xib */; };
+		C446A79A2833925200D76A6C /* ListSellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446A7992833925200D76A6C /* ListSellViewModel.swift */; };
+		C446A79C28339DC400D76A6C /* ItemToSellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446A79B28339DC400D76A6C /* ItemToSellModel.swift */; };
 		C46C2940283160D90090B749 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C293E283160D90090B749 /* HomeViewController.swift */; };
 		C46C2941283160D90090B749 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46C293F283160D90090B749 /* HomeViewController.xib */; };
 		C46C2945283161A50090B749 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C2944283161A50090B749 /* BaseViewController.swift */; };
@@ -85,6 +89,10 @@
 		3A328E26D9B202D8377E78F7 /* Pods_TodoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4517051F9AA181AB8D55D18D /* Pods-TodoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoAppTests/Pods-TodoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F41F86B08FFFEDEB015988 /* Pods-TodoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp.debug.xcconfig"; path = "Target Support Files/Pods-TodoApp/Pods-TodoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C446A7952833920400D76A6C /* ListSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSellViewController.swift; sourceTree = "<group>"; };
+		C446A7962833920400D76A6C /* ListSellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSellViewController.xib; sourceTree = "<group>"; };
+		C446A7992833925200D76A6C /* ListSellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSellViewModel.swift; sourceTree = "<group>"; };
+		C446A79B28339DC400D76A6C /* ItemToSellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemToSellModel.swift; sourceTree = "<group>"; };
 		C46C293E283160D90090B749 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C46C293F283160D90090B749 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C46C2944283161A50090B749 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +200,23 @@
 				3A328E26D9B202D8377E78F7 /* Pods_TodoAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C446A78728338FDF00D76A6C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C470190228315F9F00F6D6D6 /* TodoApp.xcdatamodeld */,
+				C446A78828338FE700D76A6C /* Models */,
+				C446A79B28339DC400D76A6C /* ItemToSellModel.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C446A78828338FE700D76A6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C46C293D283160C60090B749 /* Scences */ = {
@@ -305,6 +330,7 @@
 		C47018F828315F9F00F6D6D6 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				C446A78728338FDF00D76A6C /* CoreData */,
 				C4B43AE22832A3C400127B6F /* Extension */,
 				C4B43AC328327B0600127B6F /* Networking */,
 				C46C2943283161840090B749 /* Base */,
@@ -314,7 +340,6 @@
 				C470190528315FA100F6D6D6 /* Assets.xcassets */,
 				C470190728315FA100F6D6D6 /* LaunchScreen.storyboard */,
 				C470190A28315FA100F6D6D6 /* Info.plist */,
-				C470190228315F9F00F6D6D6 /* TodoApp.xcdatamodeld */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -457,6 +482,8 @@
 		C4B43B072832BF4B00127B6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C446A7952833920400D76A6C /* ListSellViewController.swift */,
+				C446A7962833920400D76A6C /* ListSellViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,6 +491,7 @@
 		C4B43B082832BF5300127B6F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C446A7992833925200D76A6C /* ListSellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -619,6 +647,7 @@
 				C4B43B162832C14800127B6F /* ListDeviceViewController.xib in Resources */,
 				C46C2941283160D90090B749 /* HomeViewController.xib in Resources */,
 				C4B43B1B2832C79B00127B6F /* DeviceCell.xib in Resources */,
+				C446A7982833920400D76A6C /* ListSellViewController.xib in Resources */,
 				C4B43B222832CDB300127B6F /* ContactCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,6 +795,8 @@
 			files = (
 				C4B43ADB2832813600127B6F /* KzNetworkServices.swift in Sources */,
 				C4B43AD7283280BF00127B6F /* BaseResult.swift in Sources */,
+				C446A7972833920400D76A6C /* ListSellViewController.swift in Sources */,
+				C446A79C28339DC400D76A6C /* ItemToSellModel.swift in Sources */,
 				C47018FA28315F9F00F6D6D6 /* AppDelegate.swift in Sources */,
 				C4B43B212832CDB300127B6F /* ContactCell.swift in Sources */,
 				C4B43AD128327F8100127B6F /* BaseAPIs.swift in Sources */,
@@ -787,6 +818,7 @@
 				C4B43AD9283280E900127B6F /* KzAPIClient.swift in Sources */,
 				C4B43B102832BFB900127B6F /* ListContactViewModel.swift in Sources */,
 				C4B43B042832BCE100127B6F /* RxSwift+Extensions.swift in Sources */,
+				C446A79A2833925200D76A6C /* ListSellViewModel.swift in Sources */,
 				C4B43AF62832B8C500127B6F /* ViewModelTransformable.swift in Sources */,
 				C4B43B1A2832C79B00127B6F /* DeviceCell.swift in Sources */,
 				C4B43B002832BA5700127B6F /* Optional+Additional.swift in Sources */,

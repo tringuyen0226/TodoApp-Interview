@@ -32,5 +32,12 @@ public struct DeviceModel : Codable {
         type = try values.decodeIfPresent(Int.self, forKey: .type)
     }
 
+    init(id: Int, name: String, price: Int, quantity: Int, type: Int) {
+        self.id = id
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        self.type = type
+    }
 }
 
