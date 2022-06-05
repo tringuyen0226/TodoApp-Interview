@@ -1,4 +1,4 @@
 # TodoApp-Interview
-To-do App for Interviewing with JobLogic company
+To-do App Sample with Clean Architecture + MVVM + RxSwift
 
 Current developing brach: dev
